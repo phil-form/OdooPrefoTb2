@@ -20,16 +20,16 @@ for(let i = 0; i < arr.length; i++)
 }
 
 /*
-    Cette méthode fonctionne bien sur les petits tableau, mais sera particulièrement gourmande pour les tableaux de grande tailles,
+    Cette méthode fonctionne bien sur les petits tableaux, mais sera particulièrement gourmande pour les tableaux de grande taille,
     car sa complexité est linéaire (soit O(N) ).
 
-    Serait-il possible de faire en sorte d'avoir une algorithme de recherche plus rapide?
+    Serait-il possible de faire en sorte d'avoir un algorithme de recherche plus rapide ?
 
     Voyons la méthode du binary search.
 
-    Pour cette méthode, nous allons diviser le tableau en deux parties égales et ensuite nous allons vérifier si la valeur cherchée 
-    est plus grande ou plus petite que la valeur centrale. Si celle-ci est plus grande, alors nous faisons la même chose sur la partie 
-    supérieur du tableau, si non sur la partie inférieur.
+    Pour cette méthode, nous allons diviser le tableau en deux parties égales et ensuite nous allons vérifier si la valeur cherchée
+    est plus grande ou plus petite que la valeur centrale. Si celle-ci est plus grande, alors nous faisons la même chose sur la partie
+    supérieure du tableau, sinon sur la partie inférieure.
 */
 
 // arr = [1, 2, 12, 23, 32, 42, 54, 55, 100, 134]

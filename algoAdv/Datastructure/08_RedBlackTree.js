@@ -1,5 +1,5 @@
 /*
-    Les binary trees sont très intéressent, mais il y a toujours un problème.
+    Les binary trees sont très intéressants, mais il y a toujours un problème.
 
     Que ce passe t'il si le binary tree ressemble à ça : 
 
@@ -16,9 +16,9 @@
     Dans ce cas, on perds tous les avantages du binary tree et le binary tree se comporte comme une liste.
     Donc pour retrouver la node 1 nous aurons besoin de parcourir toutes les nodes.
 
-    Pour palier à ce problème nous avons les Balanced search trees. Ces arbres vont tendre à respecter une complexitée de O(log n).
+    Pour pallier ce problème nous avons les Balanced search trees. Ces arbres vont tendre à respecter une complexité de O(log n).
 
-    Un Red Black tree est un balanced binary tree spéciale respectant un certains nombre de critères :
+    Un Red Black tree est un balanced binary tree spécial respectant un certain nombre de critères :
         - Les nodes sont soit rouges soit noir
         - La root et les leaves (NIL) du tree sont noir
         - Si une node est rouge, alors elle DOIT avoir des enfants noir.
@@ -38,21 +38,21 @@
          NIL NIL NIL NIL
     
     Ce que ce tree respecte :
-        - Le root node et tous les nils nodes sont noire
-        - Toutes les nodes rouges ont des enfants noir.
-        - Tous les chemins d'une node vers ses descendants noirs ont le même nombre de node noires. 
-          Ici le RBT a une black height de 2 (on ne compte pas la node de départ Donc ici 8 -> 5 B++ -> NIL B++ 
+        - Le root node et tous les nils nodes sont noirs
+        - Toutes les nodes rouges ont des enfants noirs.
+        - Tous les chemins d'une node vers ses descendants noirs ont le même nombre de nodes noires.
+          Ici le RBT a une black height de 2 (on ne compte pas la node de départ Donc ici 8 -> 5 B++ -> NIL B++
           ou 8 -> 15R -> 12B++ -> 13R -> NIL B++).
           Chaque node a sa propre black height (5 a une black height de 1).
 
-    Le chemin le plus long depuis la root vers un NIL n'est pas plus long que deux fois la longeur du chemin le plus court.
+    Le chemin le plus long depuis la root vers un NIL n'est pas plus long que deux fois la longueur du chemin le plus court.
 
-    Pour pouvoir blancé un red black tree, nous devrons utiliser des rotations, leur but sera :
-        - Modifier la structure du tree pour réaranger ses sub-trees.
+    Pour pouvoir balancer un red black tree, nous devrons utiliser des rotations, leur but sera :
+        - Modifier la structure du tree pour réarranger ses sub-trees.
         - Réduire la hauteur du tree.
             - max height de O(log n)
-            - On peut modifier la taille en montant les sub trees plus large et en descendant les sub-trees plus petit.
-        - Les rotations ne modifie pas l'ordre des éléments (les éléments plus large resteront à droite et les plus petits seront à gauche)
+            - On peut modifier la taille en montant les sub trees plus larges et en descendant les sub-trees plus petits.
+        - Les rotations ne modifient pas l'ordre des éléments (les éléments plus larges resteront à droite et les plus petits seront à gauche)
     
     Left rotation :
             5                   10
@@ -67,8 +67,8 @@
         6     9              6     9
     
     L'enfant de 10 plus petit que 10 devient l'enfant plus grand que 5 et 10 devient le parent de 5.
-    La right rotation est la même chose mais dans le sense inverse, donc l'enfant le plus grand de 5 devient l'enfant le plus petit de 10
-    et 5 devient le parent de 10 (soit dans le sense inverse).
+    La right rotation est la même chose mais dans le sens inverse, donc l'enfant le plus grand de 5 devient l'enfant le plus petit de 10
+    et 5 devient le parent de 10 (soit dans le sens inverse).
 
     Pseudo code :
 
@@ -86,7 +86,7 @@
     y.left = x                  // on place x à gauche d'y
     x.parent = y                // y devient le parent de x.
 
-    La complexitée de cette algorithme est de 1.
+    La complexité de cet algorithme est de O(1).
 
     Insertion :
     
@@ -112,12 +112,12 @@
                 
     Solution :
         - Si la node insérée est la root :
-            - La node étant rouge, on la recolorie pour qu'elle soit noire.
+            - La node étant rouge, on la recolorie pour qu'il soit noir.
 
         - Si la node insérée a un oncle rouge :
-            - on recolore le parent, l'oncle et les grands parents.
+            - on recolore le parent, l'oncle et les grands-parents.
 
-        - Si la nouvelle node, son parent et son grand parent forme un triangle :
+        - Si la nouvelle node, son parent et son grand-parent forme un triangle :
             B B
              \
               A R
@@ -130,7 +130,7 @@
               Z R
                \
                 A R
-        - Si la nouvelle node, sont parent et son grand parent forme une ligne :
+        - Si la nouvelle node, son parent et son grand-parent forme une ligne :
             B B
            / \
           C B A R
@@ -231,9 +231,9 @@
            1 R   15 R
 
     Complexité :
-        Insert O(log n) => lié à la hauteure maximum du tree
+        Insert O(log n) => lié à la hauteur maximum du tree
         Mettre la couleur de la node en rouge O(1)
-        Fixé les violations O(log n) (car on peut avoir à fixé l'arbre jusquà sa racine)
+        Fixer les violations O(log n) (car on peut avoir à fixer l'arbre jusqu'à sa racine)
             rotation O(1)
             recolor O(1)
         
@@ -254,11 +254,11 @@
                 - On regarde quel cas s'applique encore à ce tree et on s'occupe du problème.
             5 Le frère est noir et l'enfant éloigné est noir et l'enfant proche est rouge
                 - on échange les couleurs du frère avec l'enfant rouge.
-                - on fait une rotation sur le frère en diraction opposée à DB
+                - on fait une rotation sur le frère en direction opposée à DB
                 - On applique aussi le cas 6
             6 Le frère est noir et l'enfant proche est noir et l'éloigné rouge
                 - on échange les couleurs du parent de DB avec son frère
-                - On fait une rotation du parent dans la direciton de DB
+                - On fait une rotation du parent dans la direction de DB
                 - On retire le DB et on en fait une node noir normale
                 - On change la couleur de l'enfant éloigné du frère de rouge à noir.
 

@@ -7,8 +7,8 @@
  */
 
 /*
-    à chaque ittération, on va sélectionner le plus petits élément
-    de la partition non triée et le mettre dans une parition triée.
+    À chaque itération, on va sélectionner le plus petit élément
+    de la partition non triée et le mettre dans une partition triée.
 
     On va garder en mémoire le minimum actuel (v) et l'élément actuel (^).
     
@@ -24,9 +24,9 @@
     [2, 8, 5, 3, 9, 4, 1] -> [2, 8, 5, 3, 9, 4, 1]
      ------------------^                        ^
 
-    Comme on est à la fin de notre tableau, on inverse cette élément avec celui
+    Comme on est à la fin de notre tableau, on inverse cet élément avec celui
     du début de notre tableau, qui devient notre premier élément trié.
-    On déplace ensuite les pointeurs au premnier élément non trié.
+    On déplace ensuite les pointeurs au premier élément non trié.
         v
     [1| 8, 5, 3, 9, 4, 2]
         ^
@@ -41,7 +41,7 @@
            v
     [1, 2| 5, 3, 9, 4, 8]
            ^
-    On répète enuiste l'opération :
+    On répète ensuite l'opération :
            ---v                     ------------v
     [1, 2| 5, 3, 9, 4, 8] -> [1, 2| 5, 3, 9, 4, 8]
            ---^                     ---^

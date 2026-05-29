@@ -1,6 +1,6 @@
 /*
     Une stack est une datastructure qui va fonctionner par le principe LIFO (Last In First Out).
-    C'est donc le dernière élément introduit dans la stack qui en sera retiré en premier.
+    C'est donc le dernier élément introduit dans la stack qui en sera retiré en premier.
 
     -------------
     | Element 1 |

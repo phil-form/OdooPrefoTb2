@@ -11,8 +11,8 @@
 
     [2, 8, 5, 3, 9, 4, 1, 7]
 
-    Dans le merge sort, nous allons divisé notre tableau en deux, jusqu'a ne plus qu'avoir des 
-    items individuel.
+    Dans le merge sort, nous allons diviser notre tableau en deux, jusqu'à ne plus qu'avoir des
+    items individuels.
 
        [2, 8, 5, 3 | 9, 4, 1, 7]
       [2, 8 | 5, 3 | 9, 4 | 1, 7]
@@ -54,12 +54,12 @@ function mergeSort(arr) // O(log N)
         return arr;
     }
 
-    // On cherhce l'index central de l'array et on split l'array en deux array à partir du centre.
+    // On cherche l'index central de l'array et on split l'array en deux arrays à partir du centre.
     const middleIndex = Math.floor(arr.length / 2);
     const leftArr = arr.slice(0, middleIndex);
     const rightArr = arr.slice(middleIndex, arr.length);
 
-    // On execute fait ensuite un mergeSort des deux sub-array.
+    // On fait ensuite un mergeSort des deux sub-arrays.
     // const lArr = mergeSort(leftArr);
     // const rArr = mergeSort(rightArr);
     // et on fini par executer la fonction merge qui va fusioner et trié ces deux tableaux.

@@ -1,10 +1,10 @@
 /*
-    La complexitée quadratique évoluera en fonction du carré de l'entrée.
+    La complexité quadratique évoluera en fonction du carré de l'entrée.
 */
 
 function linearFunction(arr)
 {
-    // La complexité de cette algorithme contient donc des constantes que l'on ne prend pas en compte.
+    // La complexité de cet algorithme contient donc des constantes que l'on ne prend pas en compte.
     // Ainsi que deux O(N), ce qui donne O(N * N) soit O(N^2)
     for(let i = 0; i < arr.length; i++) // O(N) au plus l'array sera grand au plus la fonction prendra du temps.
     {

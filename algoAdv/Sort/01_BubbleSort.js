@@ -16,9 +16,9 @@
  console.log(bubbleSort([5, 1, 3, 2, 9, 8]));
 
 /*
-    Le bubble sort est l'algorithme la plus simple :
+    Le bubble sort est l'algorithme le plus simple :
         - On va parcourir le tableau et comparer chaque élément avec
-          avec l'élément suivant.
+          l'élément suivant.
         - Si l'élément du bas est plus grand que celui de l'index supérieur
           alors on les inverse.
 
@@ -28,18 +28,18 @@
         [1 , 3 , 5<=>2 , 9 , 8]
         [1 , 3 , 2 , 5---9 , 8]
         [1 , 3 , 2 , 5 , 9<=>8] FIN
-    2 ème ittération
+    2 ème itération
         [1---3 , 2 , 5 , 8 , 9]
         [1 , 3<=>2 , 5 , 8 , 9]
         [1 , 2 , 3---5 , 8 , 9]
         [1 , 2 , 3 , 5---8 , 9]
         [1 , 2 , 3 , 5 , 8---9]
 
-    Comme on peut le constater, après la première ittération le dernière élément du tableau est déjà
+    Comme on peut le constater, après la première itération le dernier élément du tableau est déjà
     le plus grand.
 
-    On peut donc optimiser l'algorithme en ne regardant plus les éléments que l'on sait trié 
-    (soit le dernier index de chaque ittération).
+    On peut donc optimiser l'algorithme en ne regardant plus les éléments que l'on sait triés
+    (soit le dernier index de chaque itération).
 */
 
 function bubbleSort(arr){

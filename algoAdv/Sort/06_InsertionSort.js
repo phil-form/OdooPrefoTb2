@@ -10,8 +10,8 @@
     Fonctionnement :
         - On va parcourir le tableau de droite à gauche.
         - On compare chaque élément avec l'élément à sa gauche.
-        - Inserer l'item à sa position dans le tableau.
-        - Nous obtiendront des paritions triées et non triées.
+        - Insérer l'item à sa position dans le tableau.
+        - Nous obtiendrons des partitions triées et non triées.
 
     On parcoure le tableau, et on compare l'index actuel avec l'élément à sa gauche.
     N'ayant pas d'élément à sa gauche, nous le marquons comme trié et on incrémente v.

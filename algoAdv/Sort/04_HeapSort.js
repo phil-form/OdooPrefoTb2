@@ -61,7 +61,7 @@
         / \    /
         3  2  9
 
-    Nous pouvons maintenant considéré 9 comme étant trié (vu que c'étais l'élément le plus grand).
+    Nous pouvons maintenant considérer 9 comme étant trié (vu que c'était l'élément le plus grand).
 
     [1, 8, 5, 3, 2, 9]
     
@@ -83,7 +83,7 @@
         / \   //            / \             / \
         3  2  9            3  2            1  2
 
-    Maintenant que nous avons denouveau un max heap nous pouvons interchanger le max avec le dernière 
+    Maintenant que nous avons de nouveau un max heap nous pouvons interchanger le max avec le dernier
     élément du tableau. Nous pouvons considérer 8 comme étant trié.
 
     [2, 3, 5, 1 | 8 | 9]
@@ -187,8 +187,8 @@ function buildMaxHeap(arr)
 {
     let i = Math.floor((arr.length / 2) - 1);
 
-    // On parcour le tableau dans le sense inverse
-    // Et on appel heapify sur un array de plus en plus grand
+    // On parcourt le tableau dans le sens inverse
+    // Et on appelle heapify sur un array de plus en plus grand
     // On part de i (qui est égal à la moitier du tableau)
     // et on va jusqu'à 0. Ce qui va créer un max heap de notre tableau.
     while(i >= 0)

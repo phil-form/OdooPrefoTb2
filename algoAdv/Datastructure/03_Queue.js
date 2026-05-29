@@ -1,6 +1,6 @@
 /*
     Une stack est une datastructure qui va fonctionner par le principe FIFO (First In First Out).
-    C'est donc le première élément introduit dans la stack qui en sera retiré en premier.
+    C'est donc le premier élément introduit dans la stack qui en sera retiré en premier.
 
     -------------
     | Element 1 |

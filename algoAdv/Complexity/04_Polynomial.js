@@ -1,10 +1,10 @@
 /*
-    La complexitée quadratique évoluera en fonction d'un exposant de l'entrée.
+    La complexité polynomiale évoluera en fonction d'un exposant de l'entrée.
 */
 
 function linearFunction(arr)
 {
-    // La complexité de cette algorithme contient donc des constantes que l'on ne prend pas en compte.
+    // La complexité de cet algorithme contient donc des constantes que l'on ne prend pas en compte.
     // Ainsi que trois O(N), ce qui donne O(N * N * N) soit O(N^3)
     for(let i = 0; i < arr.length; i++) // O(N) au plus l'array sera grand au plus la fonction prendra du temps.
     {

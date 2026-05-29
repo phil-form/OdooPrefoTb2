@@ -1,5 +1,5 @@
 /*
-    La complexitée d'une fonction linéaire augmentera de manière linéaire par rapport à l'entrée.
+    La complexité d'une fonction linéaire augmentera de manière linéaire par rapport à l'entrée.
 */
 
 function linearFunction(arr)
